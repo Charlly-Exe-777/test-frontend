@@ -11,6 +11,7 @@ function App() {
       const res = await fetch(`${serverEndpoint}/get-res`);
       const data = await res.json();
       setData(data)
+      console.log(data);
     } catch (err){
       console.log(err);
     }
@@ -20,7 +21,7 @@ function App() {
     <>
       <div className="homePageContainer">
         <button className='sendReqBtn' onClick={getDataFromServer}>Get Response</button>
-        {data !== null ? <p>{data.message}</p> :''}
+        {data !== null ? <p>We got data.</p> :''}
       </div>
     </>
   )
