@@ -21,7 +21,7 @@ function App() {
     <>
       <div className="homePageContainer">
         <button className='sendReqBtn' onClick={getDataFromServer}>Get Response</button>
-        {data !== null ? <p>We got data.</p> :''}
+        {data !== null ? <p>{data.message}</p> :''}
       </div>
     </>
   )
